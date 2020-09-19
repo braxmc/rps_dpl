@@ -1,15 +1,13 @@
-let userChoice = 'rock';
+let userChoice = [];
 
 let compChoice = Math.random();
 if (compChoice < .33) {
-  compChoice = 'rock';
+  compChoice = ['rock'];
 } else if (compChoice > .33 && compChoice < .66) {
-  compChoice = 'paper';
+  compChoice = ['paper'];
 } else {
-  compChoice = 'scissors';
+  compChoice = ['scissors'];
 }
-
-
 
 const compare = function(choice1, choice2) {
   if (choice1 === choice2) {
@@ -45,9 +43,16 @@ const compare = function(choice1, choice2) {
   }
 }
 
-
-console.log(userChoice);
 console.log(compChoice);
 
-
 compare(userChoice, compChoice);
+
+
+const choiceButtons = document.querySelectorAll('[data-choice]')
+
+choiceButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    userChoice.push(button.innerText)
+    console.log(userChoice)
+  })
+})
