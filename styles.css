@@ -17,6 +17,11 @@ section {
   align-items: center;
 }
 
+#newGame {
+  width: 5em;
+  border-radius: 5px;
+}
+
 .winLoss {
   color: white;
   height: 10vh;

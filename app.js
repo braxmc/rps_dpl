@@ -65,14 +65,23 @@ console.log(choice2)
 }
 
 const choiceButtons = document.querySelectorAll('[data-choice]')
+const newButton = document.querySelector('[data-new]')
 
 choiceButtons.forEach(button => {
   button.addEventListener('click', () => {
     userChoice.push(button.innerText)
     compare(userChoice, compChoice);
     console.log(userChoice)
-    userChoice = []
-    compChoice = []
+    userChoice = [];
+    compChoice = [];
   })
+})
+
+newButton.addEventListener('click', button => {
+  document.getElementById('userScore').innerHTML = 0;
+  document.getElementById('compScore').innerHTML = 0;
+  document.getElementById('user').innerHTML = '';
+  document.getElementById('cpu').innerHTML = '';
+  document.getElementById('winner').innerHTML = '';
 })
 
