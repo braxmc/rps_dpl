@@ -25,17 +25,38 @@ section {
   align-items: center;
 }
 
-.score h2, .options h2 {
+.score h2, .options h2, .winLoss h2 {
   font-size: 30px;
 }
 
-.score p {
+.score p, .options p, .winLoss p {
   text-align: center;
   padding: 10px;
   font-size: 25px;
 }
 
+.option {
+  display: flex;
+  justify-content: center;
+}
+
 .hands {
   display: flex;
+  justify-content: space-evenly;
   flex-direction: row;
+}
+
+.hand1 {
+  transform: rotateY(180deg);
+}
+
+.butts {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#rock, #paper, #scissors {
+  font-size: 2em;
+  border-radius: 10px;
+  width: 4em;
 }
