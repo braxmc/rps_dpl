@@ -10,12 +10,12 @@ if (compChoice < .33) {
 }
 
 const compare = function(choice1, choice2) {
-  if (choice1 === choice2) {
+  if (choice1[0] === choice2[0]) {
     console.log('tie');
     return 'tie';
   }
-  if (choice1 === 'rock') {
-    if (choice2 === 'scissors') {
+  if (choice1[0] === 'rock') {
+    if (choice2[0] === 'scissors') {
       console.log('you win')
       return 'you win';
     } else {
@@ -23,8 +23,8 @@ const compare = function(choice1, choice2) {
       return 'you lose';
     }
   }
-  if (choice1 === 'paper') {
-    if (choice2 === 'rock') {
+  if (choice1[0] === 'paper') {
+    if (choice2[0] === 'rock') {
       console.log('you win')
       return 'you win';
     } else {
@@ -32,8 +32,8 @@ const compare = function(choice1, choice2) {
       return 'you lose';
     }
   }
-  if (choice1 === 'scissors') {
-    if (choice2 === 'paper') {
+  if (choice1[0] === 'scissors') {
+    if (choice2[0] === 'paper') {
       console.log('you win')
       return 'you win';
     } else {
@@ -45,14 +45,13 @@ const compare = function(choice1, choice2) {
 
 console.log(compChoice);
 
-compare(userChoice, compChoice);
-
-
 const choiceButtons = document.querySelectorAll('[data-choice]')
 
 choiceButtons.forEach(button => {
   button.addEventListener('click', () => {
     userChoice.push(button.innerText)
+    compare(userChoice, compChoice);
     console.log(userChoice)
   })
 })
+
