@@ -1,15 +1,17 @@
 let userChoice = [];
 
-let compChoice = Math.random();
-if (compChoice < .33) {
-  compChoice = ['rock'];
-} else if (compChoice > .33 && compChoice < .66) {
-  compChoice = ['paper'];
-} else {
-  compChoice = ['scissors'];
-}
+let compChoice = [];
 
 const compare = function(choice1, choice2) {
+  choice2 = Math.random();
+  if (choice2 < .33) {
+  choice2 = ['rock'];
+  } else if (choice2 > .33 && choice2 < .66) {
+  choice2 = ['paper'];
+  } else {
+  choice2 = ['scissors'];
+  }
+console.log(compChoice)
   if (choice1[0] === choice2[0]) {
     console.log('tie');
     return 'tie';
@@ -52,6 +54,8 @@ choiceButtons.forEach(button => {
     userChoice.push(button.innerText)
     compare(userChoice, compChoice);
     console.log(userChoice)
+    userChoice = []
+    compChoice = []
   })
 })
 
