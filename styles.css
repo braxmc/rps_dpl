@@ -9,15 +9,23 @@ section {
   height: 100vh;
 }
 
-.score {
+.score, .options{
   color: white;
-  height: 20vh;
+  height: 10vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.score h2 {
+.winLoss {
+  color: white;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score h2, .options h2 {
   font-size: 30px;
 }
 
@@ -25,4 +33,9 @@ section {
   text-align: center;
   padding: 10px;
   font-size: 25px;
+}
+
+.hands {
+  display: flex;
+  flex-direction: row;
 }

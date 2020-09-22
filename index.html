@@ -13,30 +13,43 @@
 
       <div class="player-score">
         <h2>Player</h2>
-        <p>0</p>
+        <div id='userScore'>0</div>
       </div>
 
       <div class="computer-score">
         <h2>Computer</h2>
-        <p>0</p>
+        <div id='compScore'>0</div>
       </div>
+    </div>
 
-      <div class="intro">
-        <h1>Rock, Paper, Sciccors</h1>
-        <button>Let's Play</button>
+    <div class="options">
+      <div class="option1">
+        <h2>User Choice:</h2>
+        <div id='user'></div>
       </div>
+      <div class="option2">
+        <h2>CPU Choice:</h2>
+        <div id='cpu'></div>
+      </div>
+    </div>
 
-      <div class="match">
-        <h2 class="winner">Choose an option</h2>
-        <div class="hands">
-          <img src="rock.png" alt="picture of fist">
-          <img src="rock.png" alt="picture of fist">
+    <div class='winLoss'>
+        <div class="result">
+          <h2>Winner:</h2>
+        <div id='winner'></div>
         </div>
-        <div class="options">
-          <button class="rock" data-choice>rock</button>
-          <button class="paper" data-choice>paper</button>
-          <button class="scissors" data-choice>scissors</button>
-        </div>
+    </div>
+
+    <div class="match">
+      <h2 class="winner">Choose an option</h2>
+      <div class="hands">
+        <img src="rock.png" alt="picture of fist">
+        <img src="rock.png" alt="picture of fist">
+      </div>
+      <div class="options">
+         <button id="rock" data-choice>rock</button>
+         <button id="paper" data-choice>paper</button>
+         <button id="scissors" data-choice>scissors</button>
       </div>
     </div>
   </section>
