@@ -22,6 +22,7 @@ console.log(choice2)
     document.getElementById('winner').innerHTML = 'Draw!';
     console.log('tie');
     return 'tie';
+
   }
   if (choice1[0] === 'rock') {
     if (choice2[0] === 'scissors') {
