@@ -9,13 +9,20 @@ body {
   height: 100vh;
 }
 
+.score {
+  padding-top: 2em;
+}
+
+.options {
+  padding-top: 4em;
+}
+
 .score, .options{
   color: white;
   height: 10vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 2em;
 }
 
 #newGame {
