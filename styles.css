@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-section {
+body {
   background: linear-gradient(to right, #2E8B57, #87CEEB);
   height: 100vh;
 }
@@ -15,6 +15,7 @@ section {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-top: 2em;
 }
 
 #newGame {
@@ -66,3 +67,7 @@ section {
   width: 4em;
 }
 
+.pic {
+  height: 4em;
+  width: 4em;
+}
